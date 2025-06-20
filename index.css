@@ -1,0 +1,352 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@font-face {
+    font-family: 'PyeojinGothic-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquare','Noto Sans KR', sans-serif;
+}
+h1, h2{
+    font-family: 'SBAggroB';
+}
+a:link , a:visited{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+/* 전체 감싸기 */
+.wrap{
+    width: 100%;
+}
+/* 상단 네비바 + 로고 */
+.wrap #top{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 999;
+    background-color: #f4f4f45e;
+    /* box-shadow: 0 1px 12px #8080802b; */
+    /* 박스쉐도우 
+    -> 2번째 페이지부터 생성 , 1번쩨 페이지는 삭제 */
+}
+#top .top_inner{
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#top .logo{
+    height: 100%;
+}
+.logo a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+}
+#top .nav{
+    width: calc(100% - 64px);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav li{
+    margin-left: 5%;
+    height: 100%;
+}
+.nav li:hover a{
+    color: #1758a7;
+}
+.nav a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+/* 첫번째 페이지(home) */
+.wrap #home{
+    width: 100%;
+    height: 100vh;
+    background-color: #F4F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home h1{
+    color: #041D87;
+    font-size: 84px;
+    line-height: 1.5em;
+}
+#home .arr{
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 999;
+}
+.arr img{
+    width: 44px;
+    transform: scale(1);
+    transition: all .4s;
+}
+#home .arr:hover img{
+    transform: scale(1.1);
+}
+/* 두번째 페이지(about me) */
+.wrap #aboutMe{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+#aboutMe .title,
+#vision .title,
+#project .title,
+#skill .title{
+    font-size: 3.4rem;
+    color: #041D87;
+    padding: 110px 0 0 16%;
+    box-sizing: border-box;
+}
+#aboutMe .aboutMe_inner{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    margin-top: 90px;
+}
+.aboutMe_inner .id_picture{
+    width: 310px;
+    height: 370px;
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+    box-shadow: 1px 2px 12px 0px lightgray;
+}
+.id_picture img{
+    position: absolute;
+    left: 50%;
+    top: 13.9%;
+    transform: translateX(-50%);
+    width: 120%;
+}
+.aboutMe_inner .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 88px;
+}
+.info .name{
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+.name span{
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #424242;
+    letter-spacing: 1px;
+}
+.info .job{
+    background-color: #041D87;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+.info .email_icon a,
+.info .call_icon ,
+.info .git_icon a{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.email_icon img,
+.call_icon img,
+.git_icon img{
+    margin-right: 12px;
+}
+#aboutMe .fix_txt,
+#vision .fix_txt{
+    font-size: 7rem;
+    position: absolute;
+    right: -134px;
+    bottom: 24px;
+    color: #041d8729;
+}
+/* 세번째 페이지(vision) */
+.wrap #vision{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+#vision .title{
+    padding-top: 160px;
+}
+#vision .title2{
+    color: white;
+    font-size: 3.4em;
+    position: absolute;    
+    text-shadow: -2px 2px black, 2px -2px BLACK, -2px -2px BLACK, 2px 2px black;
+    left: 15.7%;
+    top: 165px;
+}
+#vision .vision_txt{
+    margin-left: 17.5%;
+    margin-top: 86px;
+}
+.vision_txt p{
+    margin-top: 50px;
+    margin-left: 100px;
+    line-height: 0.7;
+    font-size: 1.4em;
+}
+#vision .fix_txt{
+    right: 12px;
+}
+/* 네번째 페이지(project) */
+.wrap #project{
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f4f450;
+}
+#project .project_list{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+.project_list li{
+    background-color: white;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    line-height: 2.5em;
+    box-shadow: 0 0 16px #99999952;
+    position: relative;
+}
+.project_list h3{
+    text-align: center;
+    font-size: 1.8em;
+}
+.project_list a{
+    margin-top: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
+.project_list p{
+    font-size: 20px;
+}
+.project_list .left_arr{
+    position: absolute;
+    left: -224px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.project_list .right_arr{
+    position: absolute;
+    right: -224px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* 네번째 페이지(skill) */
+.wrap #skill{
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+}
+#skill .skill_icon{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px auto;
+}
+.skill_icon img{
+    width: 90%;
+    transform: scale(1);
+    transition: all .4s;
+}
+.skill_icon li:hover img{
+    transition: all .4s;
+    transform: scale(1.1);
+}
+/* 네번째 페이지(contact) */
+.wrap #contact{
+    width: 100%;
+    height: 44vh;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact p{
+    font-size: 1.1em;
+}
+#contact .contact_txt{
+    font-family: 'PyeojinGothic-Bold';
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+#contact img{
+    margin-bottom: 34px;
+    margin-top: 44px;
+    width: 22px;
+    transition: all .4s;
+    animation: arr 0.6s alternate ease-in-out infinite;
+    transform: translateY(0);
+}
+#contact a{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* 화살표 애니메이션 효과 */
+
+@keyframes arr{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+
+/* 네번째 페이지(copyright) */
+.wrap #copyright{
+    width: 100%;
+    background-color: #1758a7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+#copyright p{
+    color: #ffffff;
+}
